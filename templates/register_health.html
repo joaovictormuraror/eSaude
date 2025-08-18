@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro - Informações de Saúde - eSaúde{% endblock %}
+
+{% block content %}
+<div class="register-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card register-card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <h2 class="text-primary fw-bold">eSaúde.</h2>
+                            <h4 class="mb-3">Informações da Saúde</h4>
+                        </div>
+
+                        <form method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Tipo Sanguíneo</label>
+                                    <select class="form-select" name="blood_type" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Cirurgias</label>
+                                    <textarea class="form-control" name="surgeries" rows="2" 
+                                              placeholder="Digite..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Vícios</label>
+                                    <textarea class="form-control" name="addictions" rows="2" 
+                                              placeholder="Digite..."></textarea>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Remédios</label>
+                                    <textarea class="form-control" name="medications" rows="2" 
+                                              placeholder="Digite..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Casos na Família</label>
+                                    <textarea class="form-control" name="family_cases" rows="2" 
+                                              placeholder="Digite..."></textarea>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label class="form-label text-uppercase fw-bold">Alergias</label>
+                                    <textarea class="form-control" name="allergies" rows="2" 
+                                              placeholder="Digite..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                Próximo
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

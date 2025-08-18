@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Documentos Dependentes - eSaúde{% endblock %}
+
+{% block content %}
+<div class="register-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card register-card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <h2 class="text-primary fw-bold">eSaúde.</h2>
+                            <h4 class="mb-3">Anexar Documentos/Dependente</h4>
+                            <p class="text-muted">POR FAVOR, ANEXE OS DOCUMENTOS REFERENTES AO CADASTRO DE SEUS DEPENDENTES!</p>
+                        </div>
+
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">
+                                    <i class="fas fa-id-card me-2"></i>Foto da Carteira de Identidade Frente
+                                </label>
+                                <input type="file" class="form-control" name="dep_id_front" 
+                                       accept="image/*">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">
+                                    <i class="fas fa-id-card me-2"></i>Foto da Carteira de Identidade Verso
+                                </label>
+                                <input type="file" class="form-control" name="dep_id_back" 
+                                       accept="image/*">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">
+                                    <i class="fas fa-home me-2"></i>Comprovante de Residência
+                                </label>
+                                <input type="file" class="form-control" name="dep_address_proof" 
+                                       accept="image/*,application/pdf">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">
+                                    <i class="fas fa-dollar-sign me-2"></i>Comprovante de Renda
+                                </label>
+                                <input type="file" class="form-control" name="dep_income_proof" 
+                                       accept="image/*,application/pdf">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-uppercase fw-bold">
+                                    <i class="fas fa-certificate me-2"></i>Certidão de Nascimento
+                                </label>
+                                <input type="file" class="form-control" name="dep_birth_certificate" 
+                                       accept="image/*,application/pdf">
+                            </div>
+
+                            <button type="submit" class="btn btn-success btn-lg w-100">
+                                FINALIZAR
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

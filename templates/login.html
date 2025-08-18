@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Login - eSaúde{% endblock %}
+
+{% block content %}
+<div class="login-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="card login-card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <h2 class="text-primary fw-bold">eSaúde.</h2>
+                            <h4 class="mb-3">Entrar</h4>
+                            <p class="text-muted">ENTRE NA CONTA</p>
+                        </div>
+
+                        <form method="POST">
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">E-mail</label>
+                                <input type="email" class="form-control form-control-lg" name="email" 
+                                       placeholder="ola@esaude.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">Número do Plano</label>
+                                <input type="text" class="form-control form-control-lg" name="plan_number" 
+                                       placeholder="******" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-uppercase fw-bold">Telefone</label>
+                                <input type="tel" class="form-control form-control-lg" name="phone" 
+                                       placeholder="******" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-uppercase fw-bold">Senha</label>
+                                <input type="password" class="form-control form-control-lg" name="password" 
+                                       placeholder="******" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                                Entrar
+                            </button>
+                        </form>
+
+                        <div class="text-center">
+                            <p class="mb-0">Não tem uma conta? 
+                                <a href="{{ url_for('plans') }}" class="text-primary">Cadastre-se</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

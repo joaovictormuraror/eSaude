@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro - Informações Gerais - eSaúde{% endblock %}
+
+{% block content %}
+<div class="register-section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card register-card">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <h2 class="text-primary fw-bold">eSaúde.</h2>
+                            <h4 class="mb-3">Informações Gerais</h4>
+                        </div>
+
+                        <form method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Ocupação</label>
+                                    <input type="text" class="form-control" name="occupation" 
+                                           placeholder="Digite..." required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Renda</label>
+                                    <select class="form-select" name="income" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="1518$ - 2036$">1518$ - 2036$</option>
+                                        <option value="2037$ - 3000$">2037$ - 3000$</option>
+                                        <option value="3001$ - 5000$">3001$ - 5000$</option>
+                                        <option value="5001$ - 10000$">5001$ - 10000$</option>
+                                        <option value="Acima de 10000$">Acima de 10000$</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Filhos</label>
+                                    <input type="number" class="form-control" name="children" 
+                                           placeholder="0" min="0" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-uppercase fw-bold">Estado Civil</label>
+                                    <select class="form-select" name="marital_status" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="Solteiro">Solteiro</option>
+                                        <option value="Casado">Casado</option>
+                                        <option value="Divorciado">Divorciado</option>
+                                        <option value="Viúvo">Viúvo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-uppercase fw-bold">Nome do Cônjuge</label>
+                                <input type="text" class="form-control" name="spouse_name" 
+                                       placeholder="Digite...">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                Próximo
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

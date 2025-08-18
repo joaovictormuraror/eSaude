@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Planos - eSaúde{% endblock %}
+
+{% block content %}
+<div class="plans-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary">eSaúde.</h1>
+            <h2 class="mb-3">Orçamentos</h2>
+            <p class="lead">SELECIONE O MELHOR PLANO PARA VOCÊ!</p>
+        </div>
+
+        <div class="row g-4">
+            {% for plan_id, plan in plans.items() %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card plan-card h-100">
+                    <div class="card-body text-center p-4">
+                        <h5 class="card-title text-uppercase fw-bold mb-3">{{ plan.name }}</h5>
+                        <div class="price-tag mb-3">
+                            <span class="price">${{ plan.price }}</span>
+                            <span class="period">mensal</span>
+                        </div>
+                        <p class="card-text mb-4">{{ plan.description }}</p>
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('plan_details', plan_id=plan_id) }}" 
+                               class="btn btn-outline-primary">SAIBA MAIS</a>
+                            <a href="{{ url_for('register_personal') }}" 
+                               class="btn btn-primary">SELECIONAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}{{ plan.name }} - eSaúde{% endblock %}
+
+{% block content %}
+<div class="plan-details-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-primary">eSaúde.</h1>
+            <h2 class="mb-3">Fique por dentro dos nossos planos!</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card plan-detail-card">
+                    <div class="card-body p-5">
+                        <h3 class="text-primary text-uppercase fw-bold mb-4">{{ plan.name }}</h3>
+                        <p class="lead mb-4">{{ plan.description }}</p>
+                        
+                        <div class="price-section text-center mb-4">
+                            <span class="display-4 text-primary fw-bold">${{ plan.price }}</span>
+                            <span class="fs-5 text-muted">/ mensal</span>
+                        </div>
+
+                        <div class="benefits mb-4">
+                            <h5 class="mb-3">Benefícios inclusos:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Rede credenciada nacional</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Atendimento 24 horas</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Consultas virtuais</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cartão virtual</li>
+                                <li><i class="fas fa-check text-success me-2"></i>App exclusivo</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="{{ url_for('register_personal') }}" 
+                               class="btn btn-primary btn-lg px-5">SELECIONAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

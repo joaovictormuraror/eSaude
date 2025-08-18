@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container text-center py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 text-white mb-4">
+                    <i class="fas fa-heartbeat me-3"></i>eSaúde.
+                </h1>
+                <p class="lead text-white mb-5">Seu plano de saúde digital completo</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card welcome-card h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
+                                <h3 class="card-title">QUERO ME CADASTRAR</h3>
+                                <p class="card-text">Seja bem-vindo! Cadastre-se e tenha acesso aos melhores planos de saúde.</p>
+                                <a href="{{ url_for('plans') }}" class="btn btn-primary btn-lg">Começar Cadastro</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card welcome-card h-100">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-sign-in-alt fa-3x text-success mb-3"></i>
+                                <h3 class="card-title">JÁ TENHO UMA CONTA</h3>
+                                <p class="card-text">Acesse sua conta e gerencie seu plano de saúde de forma simples.</p>
+                                <a href="{{ url_for('login') }}" class="btn btn-success btn-lg">Entrar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h2 class="mb-5">Por que escolher o eSaúde?</h2>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+            <h4>Digital e Prático</h4>
+            <p>Gerencie tudo pelo seu celular ou computador</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-stethoscope fa-3x text-primary mb-3"></i>
+            <h4>Rede Credenciada</h4>
+            <p>Acesso aos melhores médicos e hospitais</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+            <h4>Atendimento 24h</h4>
+            <p>Suporte disponível a qualquer hora</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

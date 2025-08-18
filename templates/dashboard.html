@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - eSaúde{% endblock %}
+
+{% block content %}
+<div class="dashboard-section py-4">
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card dashboard-header">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="search-bar">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-text bg-white border-end-0">
+                                            <i class="fas fa-search text-muted"></i>
+                                        </span>
+                                        <input type="text" class="form-control border-start-0" 
+                                               placeholder="Pesquisar por médicos, remédios, especialidades...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <h5 class="mb-0">Olá, {{ user_data.personal_info.name if user_data.personal_info else 'Usuário' }}</h5>
+                                <small class="text-muted">Seja bem vindo ao eSaúde</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    <h6 class="mb-2">Seu plano atual oferece:</h6>
+                    <ul class="mb-0">
+                        <li>Consultas médicas ilimitadas</li>
+                        <li>Exames laboratoriais</li>
+                        <li>Atendimento 24 horas</li>
+                        <li>Rede credenciada nacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                        <h6 class="card-title">GUIA MÉDICO</h6>
+                        <button class="btn btn-outline-primary btn-sm">BUSCAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-video fa-3x text-success mb-3"></i>
+                        <h6 class="card-title">CONSULTAS VIRTUAIS</h6>
+                        <button class="btn btn-outline-success btn-sm">ACESSAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-check-in fa-3x text-warning mb-3"></i>
+                        <h6 class="card-title">CHECK-IN UNIDADE</h6>
+                        <button class="btn btn-outline-warning btn-sm">FAZER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-file-medical fa-3x text-info mb-3"></i>
+                        <h6 class="card-title">AUTORIZAÇÕES</h6>
+                        <button class="btn btn-outline-info btn-sm">VER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-calendar-plus fa-3x text-primary mb-3"></i>
+                        <h6 class="card-title">AGENDAR CONSULTA</h6>
+                        <button class="btn btn-outline-primary btn-sm">AGENDAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-flask fa-3x text-success mb-3"></i>
+                        <h6 class="card-title">EXAMES</h6>
+                        <button class="btn btn-outline-success btn-sm">VER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-stethoscope fa-3x text-warning mb-3"></i>
+                        <h6 class="card-title">CONSULTAS</h6>
+                        <button class="btn btn-outline-warning btn-sm">VER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-credit-card fa-3x text-info mb-3"></i>
+                        <h6 class="card-title">CARTÃO VIRTUAL</h6>
+                        <button class="btn btn-outline-info btn-sm">VER</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card service-card h-100">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-heart fa-3x text-danger mb-3"></i>
+                        <h6 class="card-title">MEU PLANO</h6>
+                        <button class="btn btn-outline-danger btn-sm">VER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
